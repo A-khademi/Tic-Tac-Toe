@@ -25,3 +25,6 @@
 .player-1,.player-2{
   font-size: 35px;
 }
+button{
+    border: 1px solid red;
+}

@@ -8,6 +8,7 @@
     <title>Document</title>
   </head>
   <body>
+    <button type="reset">reset</button>
     <div class="bord">
       <div id="0" class="box"></div>
       <div id="1" class="box"></div>
@@ -21,24 +22,6 @@
     </div>
     <!-- <span class="player-1">X</span>
     <span class="player-2">O</span> -->
-
-    <script>
-      const box = document.querySelectorAll(".box");
-      const boxArray = Array.from(box);
-      const player1 = document.querySelector(".player-1");
-      let currentPlayer = 1;
-
-      for (let i = 0; i < boxArray.length; i++) {
-        boxArray[i].addEventListener("click", function () {
-          if (currentPlayer == 1) {
-            this.innerHTML = '<span class="player-1">X</span>';
-            currentPlayer = 2;
-          } else {
-            this.innerHTML = '<span class="player-2">O</span>';
-            currentPlayer = 1;
-          }
-        });
-      }
-    </script>
+    <script src="./app.js"></script>
   </body>
 </html>
