@@ -1,9 +1,12 @@
 const box = document.querySelectorAll(".box");
-      const boxArray = Array.from(box);
-      const player1 = document.querySelector(".player-1");
-      const player2 = document.querySelector(".player-2");
-      const buttonReset=document.querySelector('button[type="reset"]')
-      let currentPlayer = 1;
+const boxArray = Array.from(box);
+const h1=document.querySelector('h1')
+const player1 = document.querySelector(".player-1");
+const player2 = document.querySelector(".player-2");
+const buttonReset=document.querySelector('button[type="reset"]')
+let winX=0;
+let winO=0;
+let currentPlayer = 1;
 
       for (let i = 0; i < boxArray.length; i++) {
          boxArray[i].addEventListener("click", function () {
@@ -26,54 +29,72 @@ const box = document.querySelectorAll(".box");
       function checkX(){
         if (
             (boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[1].innerHTML==='<span class="player-1">X</span>')&&(boxArray[2].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
+              winX=winX+1
+              console.log(winX)
               resetGame()
               console.log("win");
             }else if((boxArray[3].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[5].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[6].innerHTML==='<span class="player-1">X</span>')&&(boxArray[7].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[3].innerHTML==='<span class="player-1">X</span>')&&(boxArray[6].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[1].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[7].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-1">X</span>')&&(boxArray[5].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[6].innerHTML==='<span class="player-1">X</span>')){
+              h1.innerText="win-X"
               resetGame()
               console.log("win");
             }
       }
       function checkO(){
         if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[1].innerHTML==='<span class="player-2">O</span>')&&(boxArray[2].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()  
               console.log("win");
             }else if((boxArray[3].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[5].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[6].innerHTML==='<span class="player-2">O</span>')&&(boxArray[7].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[3].innerHTML==='<span class="player-2">O</span>')&&(boxArray[6].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[1].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[7].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-2">O</span>')&&(boxArray[5].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[6].innerHTML==='<span class="player-2">O</span>')){
+              h1.innerText="win-O"
               resetGame()
               console.log("win");
             }
@@ -82,9 +103,13 @@ const box = document.querySelectorAll(".box");
         for(i=0;i<boxArray.length;i++){
           boxArray[i].innerHTML=''
           boxArray[i].classList.remove("selected");
+          setTimeout(() => {
+            h1.innerText="win?"
+          },5000);
         }
         currentPlayer = 1;
       }
+
       buttonReset.addEventListener('click',function(){
         resetGame()
       });
