@@ -3,7 +3,9 @@ const boxArray = Array.from(box);
 const h1=document.querySelector('h1')
 const player1 = document.querySelector(".player-1");
 const player2 = document.querySelector(".player-2");
-const buttonReset=document.querySelector('button[type="reset"]')
+const buttonReset=document.querySelector('button[type="reset"]');
+const h2X=document.querySelector(".win-X");
+const h2O=document.querySelector(".win_O");
 let winX=0;
 let winO=0;
 let currentPlayer = 1;
@@ -31,35 +33,49 @@ let currentPlayer = 1;
             (boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[1].innerHTML==='<span class="player-1">X</span>')&&(boxArray[2].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
               winX=winX+1
-              console.log(winX)
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[3].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[5].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[6].innerHTML==='<span class="player-1">X</span>')&&(boxArray[7].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[3].innerHTML==='<span class="player-1">X</span>')&&(boxArray[6].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[1].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[7].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-1">X</span>')&&(boxArray[5].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[8].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-1">X</span>')&&(boxArray[4].innerHTML==='<span class="player-1">X</span>')&&(boxArray[6].innerHTML==='<span class="player-1">X</span>')){
               h1.innerText="win-X"
+              winX=winX+1
+              h2X.innerText=`X=${winX}`
               resetGame()
               console.log("win");
             }
@@ -67,34 +83,50 @@ let currentPlayer = 1;
       function checkO(){
         if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[1].innerHTML==='<span class="player-2">O</span>')&&(boxArray[2].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()  
               console.log("win");
             }else if((boxArray[3].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[5].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[6].innerHTML==='<span class="player-2">O</span>')&&(boxArray[7].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[3].innerHTML==='<span class="player-2">O</span>')&&(boxArray[6].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[1].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[7].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-2">O</span>')&&(boxArray[5].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[0].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[8].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }else if((boxArray[2].innerHTML==='<span class="player-2">O</span>')&&(boxArray[4].innerHTML==='<span class="player-2">O</span>')&&(boxArray[6].innerHTML==='<span class="player-2">O</span>')){
               h1.innerText="win-O"
+              winO=winO+1
+              h2O.innerText=`O=${winO}`
               resetGame()
               console.log("win");
             }
