@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-image: url(/img.jpg);
+}
 h1 {
   color: crimson;
 }
@@ -39,7 +42,7 @@ button:hover {
   height: 100px;
   margin: 20px auto;
   border-radius: 20px;
-  background-color: rgba(51, 154, 223, 0.349);
+  background-color: rgba(177, 253, 0, 0.918);
 }
 .container {
   width: 80%;
@@ -140,10 +143,10 @@ button {
     height: 100px;
     margin: 20px auto;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .text span {
-    font-size: 14px;
+    font-size: 16px;
   }
   .container {
     width: 100%;
@@ -161,11 +164,11 @@ button {
   }
   .player-1,
   .player-2 {
-    font-size: 30px;
+    font-size: 40px;
   }
   button {
     width: 80px;
     height: 20px;
-    font-size: 10px;
+    font-size: 14px;
   }
 }
