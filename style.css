@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url(/img.jpg);
+  background-image: url(./pictures/img.jpg);
 }
 h1 {
   color: crimson;
